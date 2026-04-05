@@ -1,0 +1,29 @@
+# Capybara Careers
+
+## Overview
+Capybara Careers is a centralized platform designed to help CSU Sacramento students access career-related opportunities, events, and resources. The goal of the project is to simplify how students interact with the Career Center and make it easier to stay informed and involved.
+
+## Purpose
+Many students, especially those new to Sacramento State, may find it difficult to navigate the wide range of career development resources available to them. Capybara Careers addresses this issue by providing a single, organized space where students can find relevant information and opportunities without feeling overwhelmed.
+
+## Features
+- Browse and register for career fairs and events  
+- Access resume and presentation workshops  
+- Find networking opportunities by major or department  
+- Explore internships, part-time jobs, and full-time positions  
+- Learn about faculty assistant roles  
+- Connect with potential employers  
+
+## Target Users
+- CSU Sacramento students  
+- First-year and transfer students who are beginning to explore career options  
+
+## Tech Stack (Example)
+- Frontend: HTML, CSS, JavaScript  
+- Backend: Node.js and Express (optional)  
+- Database: MongoDB or Firebase (optional)  
+
+## Installation
+```bash
+git clone https://github.com/your-username/capybara-careers.git
+cd capybara-careers
