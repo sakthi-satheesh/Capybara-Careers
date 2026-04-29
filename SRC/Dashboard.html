@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <!-- First Draft of Dashboard.html -->
-<!-- First posted 4/23/2026 -->
-<!-- Last updated 4/23/2026 -->
+<!-- First posted 4/23/2026 JM-->
+<!-- Last updated 4/29/2026  VM-->
 
 <html>
 
 <head>
+	<!-- linking CSS files to the HTML file VM -->
+<link rel="stylesheet" href="Dashboard.css">
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 
+<body>
 <header>
 	<img src="../images/UserImage.jpg" alt="UserImage" />
-	<div class="HeaderButton">
-		<button id="ResourcesButton">Resources</button>
-		<button id="EventsButton">Events</button>
-		<button id="DirectoryButton">Directory</button>
-		<button id="LogOutButton">Log out</button>
-	</div>
+
+	<nav class="nav-links">
+		<a href="#">Resources</a>
+		<a href="#">Events</a>
+		<a href="#">Directory</a>
+	</nav>
+
+	<a href="#" class="logout">Log out</a>
 </header>
 
-<body>
+
 	<div id="PageHeader">
 		<h1 class="Header">Capybara Careers</h1>
 		<p>Committed to all students in need</p>
@@ -28,7 +33,6 @@
 	
 	<div class="SearchBar">
 		<input type="text" class="SearchInput" placeholder="Search"/>
-		<button class="SearchButton">Search</button>
 	</div>
 	
 	<img src="../images/CapybaraFanClubImageOverLibrary.jpg" alt="CapybaraFanClub" />
@@ -38,6 +42,9 @@
 		<h3>Capybara Careers is the stop for all CSUS students wanting to make the most out of their Career Center Experience.</h3>
 	</div>
 	
+
+<div class="info-grid">
+
 	<div id="What">
 		<p>What:</p>
 		<h3>Ready to find your voice?</h3>
@@ -62,9 +69,10 @@
 		<h3>Lassen Hall, Room 1013</h3>
 		<p>Access the Career Center easily on-campus</p>
 	</div>
-	
+
+</div>
+
 	<img src="../images/CapybaraFanClubChairs.jpg" alt="CapybaraFanClubChairs">
-</body>
 
 <footer>
 	<div id="CapybaraCareersFooter">
@@ -78,7 +86,8 @@
 		<h3>PLACEHOLDER PHONE</h3>
 	</div>
 	
-	<img src="../images/SacStateLogo.jpg" alt=SacStateLogo">
+	<img src="../images/SacStateLogo.jpg" alt="Sac State Logo">
 </footer>
 
+</body>
 </html>
