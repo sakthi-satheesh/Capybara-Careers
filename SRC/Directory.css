@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* logo */
+header img {
+    width: 150px;
+    margin-top: 20px;
+    margin-left: 30px;
+
+}
+
+/* main container */
+.directory-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -80px;
+}
+
+/* title */
+.directory-container h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+/* search bar */
+.search-bar input {
+    width: 300px;
+    padding: 14px;
+    border: 1px solid #dddddd70;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.search-bar input::placeholder {
+    color: #aaaaaacc;
+}
+
+/* directory cards */
+.directory-card {
+    width: 700px;
+    background-color: white;
+
+    padding: 25px 30px;
+    margin-bottom: 25px;
+
+    border-radius: 18px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.256);
+
+    font-size: 18px;
+}
+
+/* hover effect */
+.directory-card:hover {
+    transform: translateY(-2px);
+    transition: 0.2s;
+}
