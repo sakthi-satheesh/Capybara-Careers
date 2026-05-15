@@ -35,7 +35,7 @@ submitButton.addEventListener('click', function(event) {
   localStorage.setItem("userEmail", email);
 
   authManager.login(fullName);
-  authManager.redirect('Logged_In.html');
+  window.location.href = 'Logged_In.html';
 });
 
 toggleButton.addEventListener('click', function() {
