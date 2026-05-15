@@ -215,6 +215,7 @@
 }
 
 .desktop-login .backButton {
+  text-decoration: none;
   position: absolute;
   top: 6px;
   left: 9px;
