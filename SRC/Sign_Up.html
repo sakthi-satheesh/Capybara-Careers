@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Sign_Up.css">
+    <script src="Sign_Up.js" defer></script>
 </head>
 <body>
 
@@ -20,22 +21,25 @@
     </div>
 
     <div class="emailBox" >
-        <input type="text" class="rectangle" placeholder="Email"/>
+        <input type="email" class="rectangle" placeholder="Email"/>
     </div>
 
     <div class="passwordBox" >
-        <input type="text" class="rectangle" placeholder="Password"/>
-        <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        <input type="password" id="password" class="rectangle" placeholder="Password"/>
+        <button type="button" id="toggle">
+            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        </button>
     </div>
 
     <div class="confirm_passwordBox" >
-        <input type="text" class="rectangle" placeholder="Confirm Password"/>
-        <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        <input type="password" id="confirmPassword" class="rectangle" placeholder="Confirm Password"/>
+        <button type="button" id="toggle2">
+            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        </button>
     </div>
 
-    <button class="button">
-        <!-- added link to dashboard.html VM -->
-        <a href="Dashboard.html" class="sign_up">Sign Up</a>
+    <button type="button" class="button">
+        <a id="submit" class="sign_up">Sign Up</a>
     </button>
 
     <div class="line" ></div>

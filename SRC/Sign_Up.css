@@ -74,19 +74,41 @@ body {
 
 .sign-up .passwordBox {
   top: 363px;
-  position: absolute;
+  position: relative;
   left: 544px;
   width: 338px;
   height: 47px;
+  display: inline-block;
+}
+
+.sign-up #toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  height: 20px;
+  right: 3px;
+}
+
+.sign-up #toggle2 {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  height: 20px;
+  right: 3px;
 }
 
 .sign-up .element {
-  position: absolute;
-  top: 20px;
-  left: 312px;
-  width: 30px;
-  height: 12px;
-  object-fit: cover;
+  width: 35px;
+  height: auto;
+  display: block;
+  transform: translateY(-50%);
+  z-index: 10;
 }
 
 .sign-up .confirm_passwordBox {
