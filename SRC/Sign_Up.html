@@ -5,58 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Sign_Up.css">
-    <script src="Sign_Up.js" defer></script>
+    <script type="module" src="Sign_Up.js"></script>
 </head>
+
 <body>
 
-<div class="sign-up" >
-    <div class="create_acct" >Create your Account</div>
+<div class="sign-up">
 
-    <div class="firstName" >
+    <div class="create_acct">Create your Account</div>
+
+    <div class="firstName">
         <input type="text" class="rectangle" placeholder="First Name"/>
     </div>
 
-    <div class="lastName" >
+    <div class="lastName">
         <input type="text" class="rectangle" placeholder="Last Name"/>
     </div>
 
-    <div class="emailBox" >
+    <div class="emailBox">
         <input type="email" class="rectangle" placeholder="Email"/>
     </div>
 
-    <div class="passwordBox" >
+    <div class="passwordBox">
         <input type="password" id="password" class="rectangle" placeholder="Password"/>
+
         <button type="button" id="toggle">
-            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+            <img class="element"
+                 src="../images/closed_eye.png"
+                 alt="Closed Eye Icon"/>
         </button>
     </div>
 
-    <div class="confirm_passwordBox" >
-        <input type="password" id="confirmPassword" class="rectangle" placeholder="Confirm Password"/>
+    <div class="confirm_passwordBox">
+        <input type="password"
+               id="confirmPassword"
+               class="rectangle"
+               placeholder="Confirm Password"/>
+
         <button type="button" id="toggle2">
-            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+            <img class="element"
+                 src="../images/closed_eye.png"
+                 alt="Closed Eye Icon"/>
         </button>
     </div>
 
-    <button type="button" class="button">
-        <a id="submit" class="sign_up">Sign Up</a>
+    <button type="button" id="submit" class="button">
+        <span class="sign_up">Sign Up</span>
     </button>
 
-    <div class="line" ></div>
-    <div class="sign_up_with" >Or sign up with</div>
+    <div class="line"></div>
 
-    <div class="social" >
-        <div class="ellipse" ></div>
-        <img class="google" src="../images/google_logo.png" alt="Google Logo"/>
-        <div class="ellipse-2" ></div>
-        <img class="facebook" src="../images/facebook_logo.png" alt="Facebook Logo"/>
-        <div class="ellipse-3" ></div>
-        <img class="twitter" src="../images/twitter_logo.png" alt="Twitter Logo"/>
-        <!-- added link to Sign_In.html VM -->
-        <a href="Sign_In.html" class="yes_account">Already have an account? Sign In</a>
+    <div class="sign_up_with">Or sign up with</div>
+
+    <div class="social">
+
+        <div class="ellipse"></div>
+        <img class="google"
+             src="../images/google_logo.png"
+             alt="Google Logo"/>
+
+        <div class="ellipse-2"></div>
+        <img class="facebook"
+             src="../images/facebook_logo.png"
+             alt="Facebook Logo"/>
+
+        <div class="ellipse-3"></div>
+        <img class="twitter"
+             src="../images/twitter_logo.png"
+             alt="Twitter Logo"/>
+
+        <a href="Sign_In.html"
+           class="yes_account">
+           Already have an account? Sign In
+        </a>
+
     </div>
 
-    <a href="Dashboard.html" class="backButton" >&lt;-</a>
+    <a href="Dashboard.html"
+       class="backButton">&lt;-</a>
+
 </div>
 
 </body>

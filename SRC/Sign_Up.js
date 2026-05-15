@@ -1,79 +1,57 @@
+import authManager from './authManager.js';
+
 const inputs = document.querySelectorAll('.rectangle');
 const submitButton = document.getElementById('submit');
+
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirmPassword');
+
+const toggleButton = document.getElementById('toggle');
+const toggleButton2 = document.getElementById('toggle2');
+
+const eyeIcon = toggleButton.querySelector('.element');
+const eyeIcon2 = toggleButton2.querySelector('.element');
 
 submitButton.addEventListener('click', function(event) {
   event.preventDefault();
 
-  //initialize the condition
-  let allValid = true;
-
-  inputs.forEach(input => {
-      //if any input is empty, change condition to false
-      if (input.value.trim() === '') {
-        allValid = false;
-      }
-    });
-
-  //check if all inputs were provided
-  if (!allValid) {
+  if (!authManager.validateInputs(inputs)) {
     alert('Please fill out all provided boxes!');
     return;
   }
 
-  //check id passwords match each other
-  if (passwordInput.value.trim() !== confirmPasswordInput.value.trim()) {
+  if (!authManager.passwordsMatch(passwordInput.value, confirmPasswordInput.value)) {
     alert('Passwords need to match!');
     return;
   }
 
-    //save user information
-  const firstName =
-    document.querySelector('.firstName input').value;
+  const firstName = document.querySelector('.firstName input').value;
+  const lastName = document.querySelector('.lastName input').value;
+  const email = document.querySelector('.emailBox input').value;
 
-  const lastName =
-    document.querySelector('.lastName input').value;
-
-  const email =
-    document.querySelector('.emailBox input').value;
-
-  //combine first and last name
   const fullName = firstName + " " + lastName;
 
   localStorage.setItem("userName", fullName);
   localStorage.setItem("userEmail", email);
 
-  //go to next page
-  window.location.href = 'Logged_In.html';
-
+  authManager.login(fullName);
+  authManager.redirect('Logged_In.html');
 });
 
-const passwordInput = document.getElementById('password');
-const confirmPasswordInput = document.getElementById('confirmPassword');
-const toggleButton = document.getElementById('toggle');
-const toggleButton2 = document.getElementById('toggle2');
-const eyeIcon = toggleButton.querySelector('.element');
-
-//toggling the password text to be visible
 toggleButton.addEventListener('click', function() {
-  // Check the current type of the first password field
   const isHidden = passwordInput.type === 'password';
 
-  // Toggle the type attribute based on current state
   passwordInput.type = isHidden ? 'text' : 'password';
 
-  //update the button text indicator
   eyeIcon.src = isHidden ? '../images/opened_eye.png' : '../images/closed_eye.png';
-  eyeIcon.alt = isHidden ? 'Closed Eye Icon' : 'Open Eye Icon';
+  eyeIcon.alt = isHidden ? 'Open Eye Icon' : 'Closed Eye Icon';
 });
 
 toggleButton2.addEventListener('click', function() {
-  // Check the current type of the first password field
-  const isHiddenConfirm = confirmPasswordInput.type === 'confirmPassword';
+  const isHiddenConfirm = confirmPasswordInput.type === 'password';
 
-  // Toggle the type attribute based on current state
   confirmPasswordInput.type = isHiddenConfirm ? 'text' : 'password';
 
-  // Update the button text indicator
-  eyeIcon.src = isHiddenConfirm ? '../images/opened_eye.png' : '../images/closed_eye.png';
-  eyeIcon.alt = isHiddenConfirm ? 'Closed Eye Icon' : 'Open Eye Icon';
+  eyeIcon2.src = isHiddenConfirm ? '../images/opened_eye.png' : '../images/closed_eye.png';
+  eyeIcon2.alt = isHiddenConfirm ? 'Open Eye Icon' : 'Closed Eye Icon';
 });

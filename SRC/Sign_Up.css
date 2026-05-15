@@ -263,6 +263,7 @@ body {
 
 .sign-up .backButton {
   position: absolute;
+  text-decoration: none;
   top: 0;
   left: 8px;
   font-family: "Inter-Bold", Helvetica;
