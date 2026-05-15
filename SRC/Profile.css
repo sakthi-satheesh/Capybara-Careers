@@ -1,77 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
+  margin: 0;
+  background-color: #f4f4f4;
+  font-family: 'Cormorant Garamond', serif;
+  color: #222;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #ddd;
+.backButton {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  font-size: 32px;
+  color: black;
+  text-decoration: none;
 }
 
-header img {
-    height: 40px;
+.profile-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px 30px;
 }
 
-.HeaderButton button {
-    margin-left: 15px;
+.profile-nav {
+  position: absolute;
+  top: 30px;
+  right: 230px;
+  display: flex;
+  gap: 50px;
 }
 
-/* Profile Banner */
-#profileBanner {
-    background-color: #c9bfa6;
-    text-align: center;
-    padding: 30px;
-    font-size: 45px;
-    font-weight: bold;
-    position: relative;
+.profile-nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
 }
 
-#editBtn {
-    position: absolute;
-    right: 50px;
-    top: 130px;
-    font-size: 20px;
+.profile-nav a:hover {
+  text-decoration: underline;
 }
 
-/* Profile Section */
-#profileContainer {
-    padding: 100px;
+.profile-header {
+  background-color: #ded5b7;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  gap: 170px;
 }
 
-#profilePic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #ccc;
-    display: block;
-    margin-bottom: 35px;
-    margin-top: -70px;
+.profile-header img {
+  width: 150px;
 }
 
-#infoBox {
-    width: 400px;
-    background-color: #e6e6e6;
-    padding: 60px;
-    border: 1.5px solid #ccc;
-    font-size: 20px;
+.profile-header h1 {
+  font-size: 52px;
+  font-weight: normal;
+  margin: 0;
 }
 
-.infoRow {
-    margin-bottom: 60px;
+.profile-card {
+  background-color: white;
+  padding: 25px 35px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: relative;
 }
 
-.label {
-    font-weight: bold;
-    margin-bottom: 5px;
+.profile-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
 }
 
-footer {
-    background-color: #ddd;
-    padding: 15px;
-    margin-top: 10px;
-    text-align: center;
+.profile-info h2 {
+  font-size: 30px;
+  margin: 0 0 10px;
+}
+
+.profile-info p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #555;
+}
+
+.edit-button {
+  position: absolute;
+  right: 35px;
+  top: 25px;
+  background-color: #ded5b7;
+  border: none;
+  padding: 6px 18px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+.main-info p {
+  font-size: 20px;
+  margin-bottom: 35px;
+}
+
+.empty-space {
+  height: 120px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills span {
+  background-color: #eeeeee;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 16px;
 }

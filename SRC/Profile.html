@@ -1,81 +1,84 @@
 <!DOCTYPE html>
-<!-- First Draft of Profile.html -->
-<!-- First posted 4/24/2026 -->
-<!-- Last updated 4/24/2026 -->
-
 <html>
 
 <head>
     <link rel="stylesheet" href="Profile.css">
     <meta charset="UTF-8">
     <title>Profile</title>
-
     <script src="Profile.js" defer></script>
 </head>
 
 <body>
 
-<header>
-    <img src="../images/UserImage.jpg" alt="UserImage" />
-    <div class="HeaderButton">
-        <button>Resources</button>
-        <button>Events</button>
-        <button>Directory</button>
-        <button>Log out</button>
-    </div>
-</header>
+<a href="javascript:history.back()" class="backButton">&lt;-</a>
 
-<!-- Profile Banner -->
-<div id="profileBanner">
-    Profile
-    <button id="editBtn">edit</button>
-</div>
+<nav class="profile-nav">
+    <a href="Resources.html">Resources</a>
+    <a href="Events.html">Events</a>
+    <a href="Directory.html">Directory</a>
+</nav>
 
-<!-- Profile Content -->
-<div id="profileContainer">
-    
-    <img id="profilePic" src="../images/UserImage.jpg" alt="Profile Picture">
+<div class="profile-page">
 
-    <div id="infoBox">
-        <div class="infoRow">
-            <div class="label">Name:</div>
-            <div id="studentName">Your Name</div>
-        </div>
-
-        <div class="infoRow">
-            <div class="label">Email:</div>
-            <div id="profileEmail">student@csus.edu</div>
-        </div>
-
-        <div class="infoRow">
-            <div class="label">Bio:</div>
-            <div>Write something about yourself here</div>
-        </div>
-
-        <div class="infoRow">
-            <div class="label">Portfolio:</div>
-            <div>your portfolio link</div>
-        </div>
+    <div class="profile-header">
+        <img src="../images/CapybaraLogo.png" alt="Capybara Logo">
+        <h1>Profile</h1>
     </div>
 
+    <div class="profile-card">
+        <img class="profile-image" src="../images/UserImage.jpg" alt="User Profile">
+
+        <div class="profile-info">
+            <h2 id="studentName">Your Name</h2>
+            <p>Computer Science Student</p>
+            <p>California State University, Sacramento</p>
+        </div>
+
+        <button class="edit-button">edit</button>
+    </div>
+
+    <div class="profile-content">
+
+        <section class="main-info card">
+            <h2>Student Information</h2>
+
+            <p><strong>Name:</strong> <span id="profileName">Your Name</span></p>
+            <p><strong>Email:</strong> <span id="profileEmail">student@csus.edu</span></p>
+            <p><strong>Bio:</strong></p>
+            <p class="empty-space"></p>
+            <p><strong>Portfolio:</strong></p>
+        </section>
+
+        <section class="side-info card">
+            <h2>Skills</h2>
+
+            <div class="skills">
+                <span>Microsoft Excel</span>
+                <span>Data Analysis</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Teamwork</span>
+            </div>
+        </section>
+
+    </div>
+
 </div>
 
-</body>
-</html><footer>
-	<div id="CapybaraCareersFooter">
-		<h3>Capybara Careers</h3>
-	</div>
-		
-	<div id="ContactInfo">
-		<h3>PLACEHOLDER EMAIL</h3>
-		<h3>California State University, Sacramento</h3>
-		<h3>6000 J Street, Sacramento, CA 95819</h3>
-		<h3>PLACEHOLDER PHONE</h3>
-	</div>
-	
-	<img src="../images/SacStateLogo.jpg" alt="SacStateLogo">
+<footer>
+    <div id="CapybaraCareersFooter">
+        <h3>Capybara Careers</h3>
+    </div>
+
+    <div id="ContactInfo">
+        <h3>PLACEHOLDER EMAIL</h3>
+        <h3>California State University, Sacramento</h3>
+        <h3>6000 J Street, Sacramento, CA 95819</h3>
+        <h3>PLACEHOLDER PHONE</h3>
+    </div>
+
+    <img src="../images/SacStateLogo.jpg" alt="SacStateLogo">
 </footer>
 
-</html>
-
 </body>
+</html>
