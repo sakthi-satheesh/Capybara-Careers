@@ -20,8 +20,19 @@ submitButton.addEventListener('click', function(event) {
     return;
   }
 
+    //save user information
+  const email =
+    document.querySelector('.emailBox input').value;
+
+  //creates a username from email
+  const username = email.split('@')[0];
+
+  localStorage.setItem("userName", username);
+  localStorage.setItem("userEmail", email);
+
   //go to next page
-  window.location.href = 'Dashboard.html';
+  window.location.href = 'Logged_In.html';
+    
 
 });
 

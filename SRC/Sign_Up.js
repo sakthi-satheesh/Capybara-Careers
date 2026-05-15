@@ -26,8 +26,24 @@ submitButton.addEventListener('click', function(event) {
     return;
   }
 
+    //save user information
+  const firstName =
+    document.querySelector('.firstName input').value;
+
+  const lastName =
+    document.querySelector('.lastName input').value;
+
+  const email =
+    document.querySelector('.emailBox input').value;
+
+  //combine first and last name
+  const fullName = firstName + " " + lastName;
+
+  localStorage.setItem("userName", fullName);
+  localStorage.setItem("userEmail", email);
+
   //go to next page
-  window.location.href = 'Dashboard.html';
+  window.location.href = 'Logged_In.html';
 
 });
 
