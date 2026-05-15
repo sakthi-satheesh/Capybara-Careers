@@ -6,6 +6,7 @@
     <meta charset="utf-8" />
     <title>Sign In</title>
     <link rel="stylesheet" href="Sign_In.css">
+    <script src="Sign_In.js" defer></script>
 </head>
 <body>
 
@@ -13,16 +14,18 @@
     <div class="log_in" >Log In</div>
 
     <div class="emailBox" >
-        <input type="text" class="rectangle" placeholder="Email"/>
+        <input type="email" class="rectangle" placeholder="Email"/>
     </div>
 
     <div class="passwordBox" >
-        <input type="text" class="rectangle" placeholder="Password"/>
-        <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        <input type="password" id="password" class="rectangle" placeholder="Password"/>
+        <button type="button" id="toggle">
+            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+        </button>
     </div>
 
-    <button class="button" >
-        <a href="#" class="sign_in">Sign In</a>
+    <button type="button" class="button">
+        <a id="submit" class="sign_in">Sign In</a>
     </button>
 
     <div class="line" ></div>
