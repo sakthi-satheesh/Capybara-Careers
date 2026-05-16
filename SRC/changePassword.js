@@ -1,7 +1,7 @@
-import authManager from './authManager.js';
+//import authManager from './authManager.js';
 
 const inputs = document.querySelectorAll('.rectangle');
-const submitButton = document.getElementById('submit');
+const submitButton = document.getElementById('submitButton');
 
 const passwordInput = document.getElementById('password');
 const confirmPasswordInput = document.getElementById('confirmPassword');
@@ -25,9 +25,8 @@ submitButton.addEventListener('click', function(event) {
     return;
   }
 
-const passwordInput = document.getElementById('password');
-const toggleButton = document.getElementById('toggle');
-const eyeIcon = toggleButton.querySelector('.element');
+  window.location.href = 'Sign_In.html';
+});
 
 //toggling the password text to be visible
 toggleButton.addEventListener('click', function() {
