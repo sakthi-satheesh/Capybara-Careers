@@ -1,15 +1,16 @@
-document.getElementById("sendReset").addEventListener("click", async function () {
+document.getElementById("sendReset").addEventListener("click", async () => {
+
     const email = document.getElementById("email").value;
-    const status = document.getElementById("statusMessage");
+    const message = document.getElementById("message");
 
     if (!email) {
-        status.textContent = "Please enter your email.";
-        status.style.color = "red";
+        message.textContent = "Please enter your email.";
+        message.style.color = "red";
         return;
     }
 
     try {
-        const response = await fetch("http://localhost:3000/forgot-password", {
+        const res = await fetch("http://localhost:3000/forgot-password", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -17,14 +18,14 @@ document.getElementById("sendReset").addEventListener("click", async function ()
             body: JSON.stringify({ email })
         });
 
-        const message = await response.text();
+        const data = await res.text();
 
-        status.textContent = message;
-        status.style.color = "green";
+        message.textContent = data;
+        message.style.color = "green";
 
-    } catch (error) {
-        console.error(error);
-        status.textContent = "Error sending reset link.";
-        status.style.color = "red";
+    } catch (err) {
+        console.error(err);
+        message.textContent = "Error sending reset email.";
+        message.style.color = "red";
     }
 });
