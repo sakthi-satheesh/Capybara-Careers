@@ -1,48 +1,60 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <meta charset="utf-8" />
     <title>Sign In</title>
+
     <link rel="stylesheet" href="Sign_In.css">
     <script src="Sign_In.js" defer></script>
 </head>
 <body>
 
-<div class="desktop-login" >
-    <div class="log_in" >Log In</div>
+<div class="desktop-login">
 
-    <div class="emailBox" >
-        <input type="email" class="rectangle" placeholder="Email"/>
+    <div class="log_in">Log In</div>
+
+    <!-- EMAIL -->
+    <div class="emailBox">
+        <input
+            type="email"
+            class="rectangle"
+            placeholder="Email"
+            id="email"
+        />
     </div>
 
-    <div class="passwordBox" >
-        <input type="password" id="password" class="rectangle" placeholder="Password"/>
+    <!-- PASSWORD -->
+    <div class="passwordBox">
+
+        <input
+            type="password"
+            id="password"
+            class="rectangle"
+            placeholder="Password"
+        />
+
         <button type="button" id="toggle">
-            <img class="element" src="../images/closed_eye.png" alt="Closed Eye Icon"/>
+            <img
+                class="element"
+                src="../images/closed_eye.png"
+                alt="Closed Eye Icon"
+            />
         </button>
     </div>
 
+    <!-- FORGOT PASSWORD -->
+    <a href="#" id="forgotPassword" class="forgotPassword">
+        Forgot Password?
+    </a>
+
+    <!-- SIGN IN BUTTON -->
     <button type="button" class="button">
-        <a id="submit" class="sign_in">Sign In</a>
+        <span id="submit" class="sign_in">
+            Sign In
+        </span>
     </button>
 
-    <div class="line" ></div>
-    <div class="sign_in_with" >Or sign in with</div>
+    <div class="line"></div>
 
-    <div class="social" >
-        <div class="ellipse" ></div>
-        <img class="google" src="../images/google_logo.png" alt="Google Logo"/>
-        <div class="ellipse-2" ></div>
-        <img class="facebook" src="../images/facebook_logo.png" alt="Facebook Logo"/>
-        <div class="ellipse-3" ></div>
-        <img class="twitter" src="../images/twitter_logo.png" alt="Twitter Logo"/>
-        <a href="Sign_Up.html" class="no_account">Don’t have an account? Sign Up</a>
-    </div>
-
-    <a href="javascript:history.back()" class="backButton" >&lt;-</a>
-</div>
-
-</body>
 </html>
