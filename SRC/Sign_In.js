@@ -1,54 +1,61 @@
+require("dotenv").config();
+
 const inputs = document.querySelectorAll('.rectangle');
 const submitButton = document.getElementById('submit');
 
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault();
+// ================================
+// SIGN IN
+// ================================
+submitButton.addEventListener('click', async function(event) {
 
-  //initialize the condition
-  let allValid = true;
+    event.preventDefault();
 
-  inputs.forEach(input => {
-      //if any input is empty, change condition to false
-      if (input.value.trim() === '') {
-        allValid = false;
-      }
+    // initialize validation condition
+    let allValid = true;
+
+    inputs.forEach(input => {
+        if (input.value.trim() === '') {
+            allValid = false;
+        }
     });
 
-  //check if all inputs were provided
-  if (!allValid) {
-    alert('Please fill out all provided boxes!');
-    return;
-  }
+    // validation check
+    if (!allValid) {
+        alert('Please fill out all provided boxes!');
+        return;
+    }
 
-    //save user information
-  const email =
-    document.querySelector('.emailBox input').value;
+    // get form values
+    const email =
+        document.querySelector('.emailBox input').value;
 
-  //creates a username from email
-  const username = email.split('@')[0];
+    const password =
+        document.getElementById('password').value;
 
-  localStorage.setItem("userName", username);
-  localStorage.setItem("userEmail", email);
+    try {
 
-  //go to next page
-  window.location.href = 'Logged_In.html';
-    
+        // send login request to backend
+        const response = await fetch('/signin', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        });
 
-});
+        const data = await response.json();
 
-const passwordInput = document.getElementById('password');
-const toggleButton = document.getElementById('toggle');
-const eyeIcon = toggleButton.querySelector('.element');
+        if (!response.ok) {
+            alert(data.message || 'Login failed');
+            return;
+        }
 
-//toggling the password text to be visible
-toggleButton.addEventListener('click', function() {
-  // Check the current type of the first password field
-  const isHidden = passwordInput.type === 'password';
+        // create username from email
+        const username = email.split('@')[0];
 
-  // Toggle the type attribute based on current state
-  passwordInput.type = isHidden ? 'text' : 'password';
-
-  //update the button text indicator
-  eyeIcon.src = isHidden ? '../images/opened_eye.png' : '../images/closed_eye.png';
-  eyeIcon.alt = isHidden ? 'Closed Eye Icon' : 'Open Eye Icon';
+        // save user info locally
+        localStorage.setItem("userName", username);
 });
