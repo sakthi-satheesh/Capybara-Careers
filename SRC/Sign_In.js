@@ -1,61 +1,54 @@
-require("dotenv").config();
-
 const inputs = document.querySelectorAll('.rectangle');
 const submitButton = document.getElementById('submit');
 
-// ================================
-// SIGN IN
-// ================================
-submitButton.addEventListener('click', async function(event) {
+submitButton.addEventListener('click', function(event) {
+  event.preventDefault();
 
-    event.preventDefault();
+  //initialize the condition
+  let allValid = true;
 
-    // initialize validation condition
-    let allValid = true;
-
-    inputs.forEach(input => {
-        if (input.value.trim() === '') {
-            allValid = false;
-        }
+  inputs.forEach(input => {
+      //if any input is empty, change condition to false
+      if (input.value.trim() === '') {
+        allValid = false;
+      }
     });
 
-    // validation check
-    if (!allValid) {
-        alert('Please fill out all provided boxes!');
-        return;
-    }
+  //check if all inputs were provided
+  if (!allValid) {
+    alert('Please fill out all provided boxes!');
+    return;
+  }
 
-    // get form values
-    const email =
-        document.querySelector('.emailBox input').value;
+    //save user information
+  const email =
+    document.querySelector('.emailBox input').value;
 
-    const password =
-        document.getElementById('password').value;
+  //creates a username from email
+  const username = email.split('@')[0];
 
-    try {
+  localStorage.setItem("userName", username);
+  localStorage.setItem("userEmail", email);
 
-        // send login request to backend
-        const response = await fetch('/signin', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email,
-                password
-            })
-        });
+  //go to next page
+  window.location.href = 'Logged_In.html';
 
-        const data = await response.json();
 
-        if (!response.ok) {
-            alert(data.message || 'Login failed');
-            return;
-        }
+});
 
-        // create username from email
-        const username = email.split('@')[0];
+const passwordInput = document.getElementById('password');
+const toggleButton = document.getElementById('toggle');
+const eyeIcon = toggleButton.querySelector('.element');
 
-        // save user info locally
-        localStorage.setItem("userName", username);
+//toggling the password text to be visible
+toggleButton.addEventListener('click', function() {
+  // Check the current type of the first password field
+  const isHidden = passwordInput.type === 'password';
+
+  // Toggle the type attribute based on current state
+  passwordInput.type = isHidden ? 'text' : 'password';
+
+  //update the button text indicator
+  eyeIcon.src = isHidden ? '../images/opened_eye.png' : '../images/closed_eye.png';
+  eyeIcon.alt = isHidden ? 'Closed Eye Icon' : 'Open Eye Icon';
 });
