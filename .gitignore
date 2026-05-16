@@ -2,5 +2,3 @@
 # As such, there are no relevant exclusions of note at the current moment.
 
 # Editing for SignIn feature, "Forgot Password"
-node_modules
-.env
