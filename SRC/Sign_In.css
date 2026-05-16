@@ -228,3 +228,22 @@
   line-height: normal;
   white-space: nowrap;
 }
+
+.desktop-login .forgotPassword {
+  position: absolute;
+  top: 382px;
+  left: 548px;
+
+  font-family: "Inter-Medium", Helvetica;
+  font-weight: 500;
+  font-size: 14px;
+
+  color: #4e4e4e;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.desktop-login .forgotPassword:hover {
+  color: #000000;
+}
